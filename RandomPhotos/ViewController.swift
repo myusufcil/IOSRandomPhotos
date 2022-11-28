@@ -38,8 +38,16 @@ class ViewController: UIViewController {
     
     @objc func didButtonTap(){
         getRandomPhoto()
+        view.backgroundColor = colors.randomElement()
     }
-    
+    let colors : [UIColor] = [
+        .systemPink,
+        .systemBlue,
+        .systemGreen,
+        .systemYellow,
+        .systemPurple,
+        .systemOrange,
+    ]
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         button.frame = CGRect(x: 30, y: view.frame.size.height - 150-view.safeAreaInsets.bottom, width: view.center.x + 50, height: 55)
